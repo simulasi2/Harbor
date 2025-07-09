@@ -30,10 +30,10 @@ fi
 if [ ! -e $ROOTFS_DIR/.installed ]; then
     mkdir $ROOTFS_DIR
     # Download Alpine Linux root file system.
-    curl -Lo  $ROOTFS_DIR/rootfs.tar.gz \
-    "https://cdimage.ubuntu.com/ubuntu-base/releases/25.10/snapshot-2/ubuntu-base-25.10-snapshot2-base-amd64.tar.gz"
+    curl -Lo  $ROOTFS_DIR/rootfs.tar.zst \
+    "https://mirror.rackspace.com/archlinux/iso/latest/archlinux-bootstrap-x86_64.tar.zst"
     # Extract the Debian root file system.
-    tar -xf  $ROOTFS_DIR/rootfs.tar.gz -C $ROOTFS_DIR
+    tar -xvf  $ROOTFS_DIR/rootfs.tar.zst -C $ROOTFS_DIR
 fi
 
 ################################
