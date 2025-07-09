@@ -33,7 +33,7 @@ if [ ! -e $ROOTFS_DIR/.installed ]; then
     curl -Lo  $ROOTFS_DIR/rootfs.tar.xz \
     "https://cloud.debian.org/images/cloud/bookworm/latest/debian-${DEBIAN_VERSION}-generic-${ARCH_ALT}.tar.xz"
     # Extract the Debian root file system.
-    tar -xf  $ROOTFS_DIR/rootfs.tar.xz -C $ROOTFS_DIR
+    tar xf  $ROOTFS_DIR/rootfs.tar.xz -C $ROOTFS_DIR
 fi
 
 ################################
