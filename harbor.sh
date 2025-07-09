@@ -31,7 +31,7 @@ if [ ! -e $ROOTFS_DIR/.installed ]; then
     mkdir $ROOTFS_DIR
     # Download Alpine Linux root file system.
     curl -Lo  $ROOTFS_DIR/rootfs.tar.xz \
-    "https://cloud.debian.org/images/cloud/bookworm/latest/debian-${DEBIAN_VERSION}-generic-${ARCH_ALT}.tar.xz"
+    "https://github.com/joaompinto/Debian/releases/download/69b42f6c/debian_12_slim.tar.gz"
     # Extract the Debian root file system.
     tar -xvf  $ROOTFS_DIR/rootfs.tar.xz -C $ROOTFS_DIR
 fi
