@@ -30,10 +30,10 @@ fi
 if [ ! -e $ROOTFS_DIR/.installed ]; then
     mkdir $ROOTFS_DIR
     # Download Alpine Linux root file system.
-    curl -Lo /tmp/rootfs.tar.xz \
+    curl -Lo  $ROOTFS_DIR/rootfs.tar.xz \
     "https://cloud.debian.org/images/cloud/bookworm/latest/debian-${DEBIAN_VERSION}-generic-${ARCH_ALT}.tar.xz"
     # Extract the Debian root file system.
-    tar -xzf /tmp/rootfs.tar.xz -C $ROOTFS_DIR
+    tar -xzf  $ROOTFS_DIR/rootfs.tar.xz -C $ROOTFS_DIR
 fi
 
 ################################
